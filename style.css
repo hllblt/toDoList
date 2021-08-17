@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  box-sizing: border-box;
+}
+header {
+  text-align: center;
+  margin-top: 20px;
+  font-family: "Indie Flower", cursive;
+  white-space: nowrap;
+}
+#cloud {
+  color: rgb(221, 8, 8);
+}
+#upper {
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+  margin-top: 20px;
+  min-width: 450px;
+}
+#lower {
+  display: flex;
+  justify-content: center;
+}
+#title {
+  font-size: large;
+  padding: 5px;
+  width: 200px;
+  /* border-right: 2px solid lightblue; */
+  border-bottom: 2px solid lightblue;
+  border-radius: 20px 20px 0 0;
+  transition: 200ms;
+}
+#date {
+  padding: 5px;
+  width: 110px;
+  /* border-right: 2px solid pink; */
+  border-bottom: 2px solid pink;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border-radius: 20px 20px 0 0;
+  transition: 200ms;
+}
+#urgency {
+  font-size: large;
+  padding: 5px;
+  width: 100px;
+  /* border-right: 2px solid lightgreen; */
+  border-bottom: 2px solid lightgreen;
+  border-radius: 20px 20px 0 0;
+  transition: 200ms;
+}
+#addButton {
+  background-color: white;
+  border-top: 2px;
+  border-right: 2px;
+  border-bottom: 2px;
+  border-left: 0px;
+  border-radius: 0 20px 20px 0;
+  border-style: solid;
+  border-color: coral;
+  padding: 10px 15px 10px 10px;
+  font-size: 25px;
+  font-weight: 700;
+  color: #5650ff;
+  transition: 200ms;
+}
+#addButton:hover {
+  background-color: #e5e4fc;
+  border-color: transparent;
+  transition: 200ms;
+}
+#urgency:hover,
+#title:hover,
+#date:hover {
+  background-color: rgb(241, 240, 240);
+  transition: 200ms;
+}
+#description {
+  margin: 20px 40px;
+  border: 1px solid rgb(209, 173, 209);
+  padding: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 10px 10px 0 10px;
+  min-width: 300px;
+}
+
+/*----------- Active Tasks -----------*/
+
+#tasks {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.taskDescDone{
+  width: 30%;
+  height: 100%;
+  min-height: 40px;
+  border: 1px solid gray;
+  min-width: 300px;
+  margin-bottom: 30px;
+  border-radius: 10px 10px 0 0;
+}
+.th1{
+  width: 50%;
+  height: 40px;
+}
+.th2{
+  width: 30%;
+  border-left: 2px solid lightgray;
+  border-right: 2px solid lightgray;
+
+}
+.th3{
+  width: 20%;
+}
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+th{
+  border-bottom: 2px solid lightgray;
+  text-align: left;
+  padding-left: 5px;
+  font-size: large;
+}
+td{
+  border-bottom: 2px;
+  border-left: 0px;
+  border-right: 2px;
+  border-top: 0px;
+  border-style: solid;
+  border-color: lightgray;
+  text-align: left;
+  padding-left: 5px;
+}
+.titles{
+  padding-left: 5px;
+}
+#descriptionTask{
+  visibility: hidden;
+}
+
+tbody tr:hover{
+  background-color: rgba(173, 216, 230, 0.322);
+  cursor: pointer;
+}
+
+/* ----------- Active Task Description ------------ */
+#descButtons{
+  border-bottom: 1px solid black;
+  /* padding: 5px 0 0 5px; */
+  height: 40px;
+}
+#descButtons h4{
+  display: inline-block;
+  margin: 10px;
+}
+.descButton{
+  float: right;
+  margin: 5px 5px 0px 0px;
+  background-color: transparent;
+  font-size: large;
+  padding: 3px 4px;
+  background-color: lightgray;
+  border-radius: 10px;
+}
+.descButton:hover{
+  background-color: grey;
+}
+
+#descClick{
+  padding: 10px;
+}

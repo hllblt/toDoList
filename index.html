@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="#"> <!--favicon hatası için -->
+</head>
+
+<body>
+    <header>
+        <h1><span id="cloud">cloud </span>task manager</h1>
+    </header>
+    <div id="upper">
+        <input id="title" type="text" placeholder="Title">
+        <input id="date" type="date">
+        <select name="urgency" id="urgency">
+            <option value="defaultUrgency" selected disabled>Urgency</option>
+            <option value="red" style="background-color: red; color: white;">High</option>
+            <option value="orange" style="background-color: orange; color: white;">Medium</option>
+            <option value="yellow" style="background-color: rgb(204, 204, 21); color: white;">Low</option>
+        </select>
+        <button id="addButton"><i class="fas fa-plus"></i></button>
+    </div>
+    <div id="lower">
+        <textarea name="description" id="description" cols="0" rows="8" placeholder="Task Description..."></textarea>
+    </div>
+    <div id="tasks">
+        <div id="taskActive" class="taskDescDone">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="th1">Title</th>
+                        <th class="th2">Date</th>
+                        <th class="th3">Urgency</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+
+                </tbody>
+            </table>
+        </div>
+        <div id="descriptionTask" class="taskDescDone">
+            <div id="descButtons">
+                <h4>title2</h4>
+                <button id="closeButton" style="font-size: larger"; class="descButton"><i class="fas fa-times"></i></button>
+                <button id="delButton" style="color: rgb(212, 26, 26);" class="descButton"><i class="fas fa-trash-alt"></i></button>
+                <!-- <button id="editButton" class="descButton"><i class="fas fa-edit"></i></button> -->
+                <button id="doneButton" style="color: green;" class="descButton"><i class="fas fa-check"></i></button>
+            </div>
+            <div id="descClick"></div>
+        </div>
+        <div id="taskPassive" class="taskDescDone"></div>
+    </div>
+    <button id="delete">satır sil</button>
+</body>
+
+</html>
