@@ -97,4 +97,3 @@ const addTask = () => {
     }
 
     closeButton.addEventListener("click", closeDesc);
-    
