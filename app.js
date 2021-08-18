@@ -32,6 +32,7 @@ const testfunction = () => {
 const reply_click = (clicked_id) => {
   document.getElementById("descClick").innerHTML = arrayTask[arrayID.indexOf(clicked_id)].description;
   document.getElementById("descriptionTask").style.visibility = "visible";
+  document.querySelector("#descButtons h4").innerHTML = arrayTask[arrayID.indexOf(clicked_id)].title;
   toDel = clicked_id;
 }
 
@@ -71,7 +72,7 @@ const addTask = () => {
     //ekle button'una click event koymak.
     addButton.addEventListener("click", addTask);
     
-    /////////////////////////////İdareten silme tuşu///////////////////////////////
+    ///////////////////////////// DELETING BUTTON ///////////////////////////////
     
     let delButton = document.getElementById("delButton");
     
@@ -86,5 +87,14 @@ const addTask = () => {
 
     delButton.addEventListener("click", delRow);
     /////////////////////////////////////////////////////////////
-    // idareten task silme işlemi.
+
+    ////////////////////// CLOSING BUTTON ///////////////////////
+
+    let closeButton = document.getElementById("closeButton");
+
+    let closeDesc = () => {
+      document.getElementById("descriptionTask").style.visibility = "hidden";
+    }
+
+    closeButton.addEventListener("click", closeDesc);
     
