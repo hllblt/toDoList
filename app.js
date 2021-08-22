@@ -93,7 +93,7 @@ const addTask = () => {
     let closeButton = document.getElementById("closeButton");
 
     let closeDesc = () => {
-      document.getElementById("descriptionTask").style.visibility = "hidden";
+      document.getElementById("descriptionTask").style.display = "block";
     }
 
     closeButton.addEventListener("click", closeDesc);
