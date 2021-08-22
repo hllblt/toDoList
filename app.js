@@ -31,7 +31,7 @@ const testfunction = () => {
 //aktif tasklere tıklandığında çalışan fonksiyon
 const reply_click = (clicked_id) => {
   document.getElementById("descClick").innerHTML = arrayTask[arrayID.indexOf(clicked_id)].description;
-  document.getElementById("descriptionTask").style.visibility = "visible";
+  document.getElementById("descriptionTask").style.display = "block";
   document.querySelector("#descButtons h4").innerHTML = arrayTask[arrayID.indexOf(clicked_id)].title;
   toDel = clicked_id;
 }
@@ -93,7 +93,7 @@ const addTask = () => {
     let closeButton = document.getElementById("closeButton");
 
     let closeDesc = () => {
-      document.getElementById("descriptionTask").style.display = "block";
+      document.getElementById("descriptionTask").style.display = "none";
     }
 
     closeButton.addEventListener("click", closeDesc);
